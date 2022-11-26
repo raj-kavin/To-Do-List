@@ -10,7 +10,7 @@ myForm.addEventListener("submit",
 
 
 createItem = (d) =>{
-  let myTemplate = `<li> ${d} <button onclick ="deleteItem(this)">Delete</button></li>`
+  let myTemplate = `<li class= "notes"> ${d} <button class="delete" onclick ="deleteItem(this)">Delete</button></li>`
   myList.insertAdjacentHTML("beforeEnd",myTemplate)
   myInput.value =""
   myInput.focus()
