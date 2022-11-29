@@ -5,10 +5,13 @@ let myList= document.getElementById("myList")
 myForm.addEventListener("submit", 
             (data) => {
   data.preventDefault()
-  createItem(myInput.value) 
+  if(myInput.value == 0){
+    alert("Please Add The Notes")
+  }
+  else{
+    createItem(myInput.value)
+  }
 })
-
-
 createItem = (d) =>{
   let myTemplate = `<li class= "notes"> ${d} <button class="delete" onclick ="deleteItem(this)">Delete</button></li>`
   myList.insertAdjacentHTML("beforeEnd",myTemplate)
